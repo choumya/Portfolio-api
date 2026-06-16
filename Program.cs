@@ -22,7 +22,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<PortfolioDbContext>(
     options =>
-        options.UseSqlServer(
+        options.UseNpgsql(
             builder.Configuration.GetConnectionString(
                 "DefaultConnection")));
 builder.Services.AddScoped<EmailService>();
