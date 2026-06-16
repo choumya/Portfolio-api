@@ -35,11 +35,11 @@ public class ContactController : ControllerBase
         _context.ContactMessages.Add(contact);
 
         await _context.SaveChangesAsync();
-        await _emailService.SendEmailAsync(
-            request.Name,
-            request.Email,
-            request.Subject,
-            request.Message);
+        // await _emailService.SendEmailAsync(
+        //     request.Name,
+        //     request.Email,
+        //     request.Subject,
+        //     request.Message);
 
         return Ok(new
         {
